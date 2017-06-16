@@ -1,0 +1,94 @@
+include mixins
+
+doctype
+html( lang="en" )
+    head
+        title EpicMath Bootstrap Snippets with Jade
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Baking Bootstrap Snippets with Jade' )
+        //- Bootswatch Theme
+        link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+
+        +bootswatch("superhero")
+        //- +bootswatch("flatly")
+
+    body(style="padding-bottom:10rem;")
+
+        .container
+        +nav("Miner 1.0", "dropdown_menu")
+            +nav_item( "index", "active" ) Home
+            +nav_item( "rigs" ) Rigs
+            +nav_item_dropdown( "#" )( label="Links")
+                +nav_item( "https://www.coinwarz.com/cryptocurrency" ) CoinWarz 
+                +nav_item( "#" ) Another action
+                +nav_item( "#" ) Something else here
+                +nav_divider
+                +nav_header Nav header
+                +nav_item( "#" ) Separated link
+                +nav_item( "#" ) One more separated link
+        .row
+            .col-md-12.col-sm-12.col-xs-12
+                table.table.table-striped
+                    thead
+                        tr
+                            th 
+                                h3 Rigs
+                            |         
+                            th 
+                                h3 Ping
+                            |         
+                            th 
+                                h3 Actions
+                    |     
+                    tbody
+                        tr
+                            td 
+                                h4 Rig 1
+                            |         
+                            td 
+                                h4 Some info
+                            |         
+                            td 
+                                +button("info", "more.htm", "large") Ping
+
+                                +button("warning", onclick='javascript:reset()', "large") Power
+
+                                +button("danger", 'javascript:hardReset()', "large") Hard Rest
+                        |       
+                        tr
+                            td 
+                                h4 Rig 2
+                            |         
+                            td 
+                                h4 Some Info
+                            |         
+                            td 
+                                +button("info", "more.htm", "large") Ping
+
+                                +button("warning", "more.htm", "large") Power
+                                
+                                +button("danger", "more.htm", "large") Hard Rest
+                        |       
+                        tr
+                            td 
+                                h4 Rig 3
+                            |         
+                            td 
+                                h4 Some Info
+                            |         
+                            td 
+                                +button("info", "more.htm", "large") Ping
+
+                                +button("warning", "more.htm", "large") Power
+                                
+                                +button("danger", "more.htm", "large") Hard Rest
+
+     
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+        script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
+        script(src="/jquery.js")
+        script(src="/javascripts/actions.js")
+
+
