@@ -17,6 +17,7 @@ TestResults
 *.sln.docstates
 
 # Build results
+.vscode/
 .vs/
 
 [Dd]ebug/
