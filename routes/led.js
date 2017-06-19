@@ -1,12 +1,23 @@
 var Gpio = require('onoff').Gpio;
 var tcpp = require('tcp-ping');
 
-module.exports.reset=reset;
+module.exports.power=power;
 module.exports.serverTime=serverTime;
 module.exports.hardReset=hardReset;
 module.exports.pingRig=pingRig;
 
-function reset(gpioId){
+// function power(gpioId)
+// {
+// 	console.log("Power" + gpioId)
+// }
+
+// function hardReset(gpioId)
+// {
+// 	console.log("HardReset" + gpioId)
+// }
+
+
+function power(gpioId){
 	onOfGPIO(gpioId,100)
 }
 
@@ -34,5 +45,5 @@ function serverTime()
 function pingRig(callback)
 {
 
-	tcpp.ping({address: '192.168.1.216'}, callback);
+	tcpp.ping({address: '172.217.18.78'}, callback);
 }

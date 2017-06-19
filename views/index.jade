@@ -49,11 +49,12 @@ html( lang="en" )
                             |         
                             td 
                                 h4 Some info
+                                div(id ='ping').
                             |         
                             td 
-                                +button("info", "more.htm", "large") Ping
+                                +button("info", onclick='javascript:pingRig()', "large") Ping
 
-                                +button("warning", onclick='javascript:reset()', "large") Power
+                                +button("warning", onclick="javascript:power(confirm('Power?'))", "large") Power
 
                                 +button("danger", 'javascript:hardReset()', "large") Hard Rest
                         |       

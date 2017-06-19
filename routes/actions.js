@@ -5,7 +5,7 @@ var onOff = require('./led.js');
 
 
 /* GET users listing. */
-router.get('/reset', function(req, res, next) {
+router.get('/power', function(req, res, next) {
 	onOff.reset(17);
   	res.send();
 });

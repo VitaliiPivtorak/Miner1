@@ -6,9 +6,11 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bindings": "^1.2.1",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
+    "epoll": "^0.1.21",
     "express": "^4.15.3",
     "express-jquery": "^1.8.3",
     "jade": "~1.11.0",

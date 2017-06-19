@@ -1,8 +1,12 @@
-reset = function () {
-    $.get("/actions/reset",
+power = function (confirmed) {
+
+    if(confirmed)
+    {
+    $.get("/actions/power",
         function(data){
             //alert(data);
         });
+    }
 }
 
 hardReset = function () {
@@ -24,6 +28,7 @@ pingRig = function()
 {
       $.get("/actions/ping_rig",
         function(data){
-           $("#ping").html(data);
+           $("#ping").html(data.toString().substring(0,5));
+           //alert(data);
        });
 }
