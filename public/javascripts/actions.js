@@ -1,19 +1,21 @@
-power = function (confirmed) {
-
-    if(confirmed)
-    {
-    $.get("/actions/power",
-        function(data){
-            //alert(data);
-        });
+power = function (confirmed, gpio) {
+    if (confirmed) {
+        $.post("/actions/power",
+            { gpio: gpio },
+            function (data) {
+                //alert(data);
+            });
     }
 }
 
-hardReset = function () {
-    $.get("/actions/hard_reset",
-        function(data){
-            //alert(data);
-        });
+hardReset = function (confirmed, gpio) {
+    if (confirmed) {
+        $.post("/actions/hard_reset",
+            { gpio: gpio },
+            function (data) {
+                //alert(data);
+            });
+    }
 }
 
 pingServerTime = function()

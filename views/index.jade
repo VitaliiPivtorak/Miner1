@@ -48,15 +48,15 @@ html( lang="en" )
                                 h4 Rig 1
                             |         
                             td 
-                                h4 Some info
-                                div(id ='ping').
+                                h4 
+                                    div(id ='ping').
                             |         
                             td 
                                 +button("info", onclick='javascript:pingRig()', "large") Ping
 
-                                +button("warning", onclick="javascript:power(confirm('Power?'))", "large") Power
+                                +button("warning", 'javascript:power(confirm("Power?"),17)', "large") Power
 
-                                +button("danger", 'javascript:hardReset()', "large") Hard Rest
+                                +button("danger", 'javascript:hardReset(confirm("Hard Reset?"),17)', "large") Hard Rest
                         |       
                         tr
                             td 
@@ -66,11 +66,11 @@ html( lang="en" )
                                 h4 Some Info
                             |         
                             td 
-                                +button("info", "more.htm", "large") Ping
+                                +button("info", onclick='javascript:pingRig()', "large") Ping
 
-                                +button("warning", "more.htm", "large") Power
-                                
-                                +button("danger", "more.htm", "large") Hard Rest
+                                +button("warning", 'javascript:power(confirm("Power?"),27)', "large") Power
+
+                                +button("danger", 'javascript:hardReset(confirm("Hard Reset?"),27)', "large") Hard Rest
                         |       
                         tr
                             td 
@@ -80,11 +80,39 @@ html( lang="en" )
                                 h4 Some Info
                             |         
                             td 
-                                +button("info", "more.htm", "large") Ping
+                                +button("info", onclick='javascript:pingRig()', "large") Ping
 
-                                +button("warning", "more.htm", "large") Power
-                                
-                                +button("danger", "more.htm", "large") Hard Rest
+                                +button("warning", 'javascript:power(confirm("Power?"),22)', "large") Power
+
+                                +button("danger", 'javascript:hardReset(confirm("Hard Reset?"),22)', "large") Hard Rest
+                        |       
+                        tr
+                            td 
+                                h4 Rig 4
+                            |         
+                            td 
+                                h4 Some Info
+                            |         
+                            td 
+                                +button("info", onclick='javascript:pingRig()', "large") Ping
+
+                                +button("warning", 'javascript:power(confirm("Power?"),5)', "large") Power
+
+                                +button("danger", 'javascript:hardReset(confirm("Hard Reset?"),5)', "large") Hard Rest
+                        |       
+                        tr
+                            td 
+                                h4 Rig 5
+                            |         
+                            td 
+                                h4 Some Info
+                            |         
+                            td 
+                                +button("info", onclick='javascript:pingRig()', "large") Ping
+
+                                +button("warning", 'javascript:power(confirm("Power?"),18)', "large") Power
+
+                                +button("danger", 'javascript:hardReset(confirm("Hard Reset?"),18)', "large") Hard Rest                
 
      
         script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )

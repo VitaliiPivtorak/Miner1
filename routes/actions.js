@@ -5,14 +5,14 @@ var onOff = require('./led.js');
 
 
 /* GET users listing. */
-router.get('/power', function(req, res, next) {
-	onOff.reset(17);
+router.post('/power', function(req, res, next) {
+	onOff.power(req.body.gpio);
   	res.send();
 });
 
 
-router.get('/hard_reset', function(req, res, next) {
-	onOff.hardReset(17);
+router.post('/hard_reset', function(req, res, next) {
+	onOff.hardReset(req.body.gpio);
   	res.send();
 });
 
