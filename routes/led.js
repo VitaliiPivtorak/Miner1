@@ -69,33 +69,13 @@ var tcpp = require('tcp-ping');
 
 
 
-// function power(gpioId){
-// 	onOfGPIO(gpioId,100)
-// }
-
-// function hardReset(gpioId){
-// 	onOfGPIO(gpioId,5000)
-// }
-
-// function onOfGPIO(gpioId, time) {
-// 	var led = new Gpio(gpioId, 'out');
-// 	led.writeSync(0);  // Turn LED off.
-//         led.writeSync(1);
-		
-// 	setTimeout(function () {
-// 	        led.writeSync(0)
-// 	        led.unexport();    // Unexport GPIO and free resources
-// 	    }, time);
-
-// }
-
 function serverTime()
 {
 	return new Date();
 }
 
-function pingRig(callback)
+function pingRig(ip,callback)
 {
-
-	tcpp.ping({address: '172.217.18.78'}, callback);
+	console.log("led.js ip=" + ip)
+	tcpp.ping({address: ip}, callback);
 }

@@ -49,10 +49,10 @@ html( lang="en" )
                             |         
                             td 
                                 h4 
-                                    div(id ='ping').
+                                    div(id ='ping1').
                             |         
                             td 
-                                +button("info", onclick='javascript:pingRig()', "large") Ping
+                                +button("info", 'javascript:pingRig("172.217.18.78", 1)', "large") Ping
 
                                 +button("warning", 'javascript:power(confirm("Power?"),17)', "large") Power
 
@@ -63,10 +63,11 @@ html( lang="en" )
                                 h4 Rig 2
                             |         
                             td 
-                                h4 Some Info
+                                h4 
+                                    div(id ='ping2').
                             |         
                             td 
-                                +button("info", onclick='javascript:pingRig()', "large") Ping
+                                +button("info", 'javascript:pingRig("98.139.180.149", 2)', "large") Ping
 
                                 +button("warning", 'javascript:power(confirm("Power?"),27)', "large") Power
 
@@ -77,10 +78,11 @@ html( lang="en" )
                                 h4 Rig 3
                             |         
                             td 
-                                h4 Some Info
+                                h4 
+                                    div(id ='ping3').
                             |         
                             td 
-                                +button("info", onclick='javascript:pingRig()', "large") Ping
+                                +button("info",'javascript:pingRig("104.155.54.204", 3)', "large") Ping
 
                                 +button("warning", 'javascript:power(confirm("Power?"),22)', "large") Power
 
@@ -91,10 +93,11 @@ html( lang="en" )
                                 h4 Rig 4
                             |         
                             td 
-                                h4 Some Info
+                                h4 
+                                     div(id ='ping4').
                             |         
                             td 
-                                +button("info", onclick='javascript:pingRig()', "large") Ping
+                                +button("info", 'javascript:pingRig("98.139.180.149", 4)', "large") Ping
 
                                 +button("warning", 'javascript:power(confirm("Power?"),5)', "large") Power
 
@@ -105,10 +108,11 @@ html( lang="en" )
                                 h4 Rig 5
                             |         
                             td 
-                                h4 Some Info
+                                h4 
+                                     div(id ='ping5').
                             |         
                             td 
-                                +button("info", onclick='javascript:pingRig()', "large") Ping
+                                +button("info", 'javascript:pingRig("98.139.180.149", 5)', "large") Ping
 
                                 +button("warning", 'javascript:power(confirm("Power?"),18)', "large") Power
 

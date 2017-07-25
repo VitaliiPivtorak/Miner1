@@ -18,19 +18,20 @@ hardReset = function (confirmed, gpio) {
     }
 }
 
-pingServerTime = function()
-{
-      $.get("/actions/server_time",
-        function(data){
-           $("#serverTime").html(data);
-       });
+pingServerTime = function () {
+    $.get("/actions/server_time",
+        function (data) {
+            $("#serverTime").html(data);
+        });
 }
 
-pingRig = function()
-{
-      $.get("/actions/ping_rig",
-        function(data){
-           $("#ping").html(data.toString().substring(0,5));
-           //alert(data);
-       });
+pingRig = function (ip, rigNumber) {
+    $.post("/actions/ping_rig",
+        { ip: ip},
+        function (data) {
+            console.log("#ping" + rigNumber);
+            console.log(ip);
+            $("#ping" + rigNumber).html(data.toString().substring(0, 5));
+            //alert(data);
+        });
 }

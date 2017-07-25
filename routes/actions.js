@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 var onOff = require('./led.js');
 
 
@@ -20,8 +19,8 @@ router.get('/server_time', function(req, res, next) {
   	res.send(onOff.serverTime());
 });
 
-router.get('/ping_rig', function(req, res, next) {
-  	onOff.pingRig(function (err, data){
+router.post('/ping_rig', function(req, res, next) {
+  	onOff.pingRig(req.body.ip,function (err, data){
 			console.log(data.avg);
 			res.send(200, data.avg);
 	});
