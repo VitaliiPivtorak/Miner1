@@ -29,6 +29,44 @@ html( lang="en" )
                 +nav_item( "#" ) Separated link
                 +nav_item( "#" ) One more separated link
         .row
+           .col-md-12.col-sm-12.col-xs-12
+                table.table.table-striped
+                    thead
+                        tr
+                            th 
+                                h3 Temperature 1
+                            |         
+                            th 
+                                h3 Temperature 2
+                            |         
+                            th 
+                                h3 Temperature 3 
+                    |     
+                    tbody
+                        tr
+                            td 
+                                h4 
+                                   div(id ='Temperature1').
+                            |         
+                            td 
+                                h4 
+                                    div(id ='Temperature2').
+                            |         
+                            td 
+                                h4
+                                    div(id ='Temperature3').  
+                        |       
+                        tr
+                            td 
+                                +button("info", 'javascript:getTemperature("28-0416b3c34fff", 1)', "large") Temperature
+                            |         
+                            td 
+                                +button("info", 'javascript:getTemperature("28-0416b3c5feff", 2)', "large") Temperature
+                            |         
+                            td 
+                                +button("info", 'javascript:getTemperature("28-0316b3eefeff", 3)', "large") Temperature
+        .row        
+        .row
             .col-md-12.col-sm-12.col-xs-12
                 table.table.table-striped
                     thead
@@ -121,7 +159,7 @@ html( lang="en" )
      
         script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
         script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
-        script(src="/jquery.js")
-        script(src="/javascripts/actions.js")
+        script(src='/jquery.js')
+        script(src='/javascripts/actions.js')
 
 

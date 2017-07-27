@@ -25,6 +25,14 @@ pingServerTime = function () {
         });
 }
 
+getTemperature = function (id, number) {
+    $.post("/actions/get_temperature",
+	{ id: id},
+        function (data) {
+            $("#Temperature" + number).html(data.toString());
+        });
+}
+
 pingRig = function (ip, rigNumber) {
     $.post("/actions/ping_rig",
         { ip: ip},

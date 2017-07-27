@@ -1,5 +1,7 @@
 var Gpio = require('onoff').Gpio;
 var tcpp = require('tcp-ping');
+var sensor = require('ds18x20');
+var sensorId = '28-0416b3c34fff';
 
 
 
@@ -60,10 +62,26 @@ var tcpp = require('tcp-ping');
 		}, time);
 	}
 
+        function getTemperature(id,callback){
+	        console.log("led.js getTemperature()");
+	        sensor.get(id , function(err, temp){
+		if(err){
+			console.log(err);
+			callback(-1);
+		}
+else
+{
+		console.log("Temperature: " + temp +'\n\n');
+			callback(temp);
+}
+		});
+	}
+
 	module.exports.power = power;
 	module.exports.serverTime = serverTime;
 	module.exports.hardReset = hardReset;
 	module.exports.pingRig = pingRig;
+        module.exports.getTemperature = getTemperature;
 }());
 
 
@@ -73,6 +91,8 @@ function serverTime()
 {
 	return new Date();
 }
+
+
 
 function pingRig(ip,callback)
 {
